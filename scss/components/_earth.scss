@@ -1,0 +1,57 @@
+#earth-container {
+  transform: translate(50%, 50%);
+  transition: 850ms ease-in-out;
+  pointer-events: none;
+  position: fixed;
+  bottom: 50%;
+  right: 50%;
+
+  #earth-box {
+    transition: 850ms ease-in-out;
+    border-radius: 100%;
+    position: relative;
+    max-height: 110rem;
+    min-height: 16rem;
+    max-width: 110rem;
+    min-width: 16rem;
+    overflow: hidden;
+    height: 30rem;
+    width: 30rem;
+
+    #earth-wrapper {
+      transition: 850ms ease-in-out;
+      position: absolute;
+      
+      // FOR EARTH.WEBM
+      transform: rotate(85deg);
+      height: 226%;
+      width: 226%;
+      left: -63%;
+      top: -63%;
+
+      // // FOR EARTH2.WEBM
+      // transform: rotate(103deg);
+      // height: 210%;
+      // width: 210%;
+      // left: -55%;
+      // top: -55%;
+
+      #earth {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      height: 36vw;
+      width: 36vw;
+    }
+  }
+
+  #earth-atmosphere {
+    box-shadow: 0 0 6vw #036, inset 0 0 6vw #08f4;
+    border-radius: 100%;
+    position: absolute;
+    inset: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.page-box-1 {
+  padding: 0 2.5rem;
+
+  .swiper {
+    max-width: 65rem;
+    width: 100%;
+
+    .swiper-slide {
+      .title {
+        padding-bottom: $nav_height;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 1099px) {
+      max-width: 42rem;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 33rem;
+    }
+  }
+}

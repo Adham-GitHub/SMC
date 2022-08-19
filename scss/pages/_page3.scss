@@ -1,0 +1,143 @@
+.page-box-3 {
+  align-items: center;
+  padding: 0 2.5rem;
+  display: grid;
+
+  .accordions-wrapper {
+    height: calc(100% - 10rem);
+    max-height: 35rem;
+    max-width: 70rem;
+    width: 100%;
+
+    .swiper {
+      .tab-menu {
+        justify-content: space-between;
+        margin: 1rem 0;
+        display: flex;
+
+        .tab {
+          transition: 250ms ease-in-out background-color;
+          width: calc(100% / 4 - 1rem);
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          max-height: 5rem;
+          @extend %effect;
+          cursor: pointer;
+          display: flex;
+          padding: 1rem;
+
+          &:hover,
+          &.active {
+            background-color: #abf6;
+          }
+        }
+
+        @media (max-width: 768px) {
+          // margin: 0 auto;
+        }
+
+        @media (max-width: 450px) {
+          padding-right: 1.5rem;
+        }
+      }
+    }
+
+    .accordions {
+      height: calc(100% - 6rem);
+      position: relative;
+
+      .accordion-wrapper {
+        transition: 700ms ease-in-out;
+        transform: translateY(10rem);
+        pointer-events: none;
+        position: absolute;
+        opacity: 0;
+        inset: 0;
+
+        &.active {
+          transform: translateY(0);
+          pointer-events: auto;
+          opacity: 1;
+        }
+
+        .accordion {
+          max-height: calc(100% - 8.5rem);
+          transition: 500ms ease-in-out;
+          @extend %effect;
+          height: 3.2rem;
+
+          &:not(:last-child) {
+            margin-bottom: 1.25rem;
+
+            @media (max-width: 1000px) {
+              max-height: calc(100% - 8.75rem);
+              margin-bottom: 1rem;
+            }
+          }
+
+          &.active {
+            height: calc(100% - 8.5rem);
+
+            .accordion-title .indicator span {
+              transform: rotate(0);
+            }
+
+            .accordion-body {
+              height: calc(100% - 3.5rem);
+              padding: 1rem;
+
+              @media (max-width: 768px) {
+                padding: 0.5rem;
+              }
+            }
+          }
+
+          .accordion-title {
+            padding: 1rem 3.5rem 1rem 1rem;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            @extend %effect;
+
+            .indicator {
+              background-color: $backdrop_color;
+              transform: translateY(50%);
+              justify-content: center;
+              align-items: center;
+              border-radius: 100%;
+              position: absolute;
+              display: flex;
+              height: 2rem;
+              width: 2rem;
+              right: 1rem;
+              bottom: 50%;
+
+              span {
+                transition: 300ms ease-in-out transform;
+                transform: rotate(45deg);
+                pointer-events: none;
+                font-size: 1.25rem;
+              }
+            }
+          }
+
+          .accordion-body {
+            transition: 500ms ease-in-out;
+            padding: 0 1rem;
+
+            .accordion-body-box {
+              overflow-y: auto;
+              @extend %text;
+              height: 100%;
+            }
+
+            @media (max-width: 768px) {
+              padding: 0 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

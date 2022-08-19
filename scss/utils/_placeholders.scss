@@ -1,0 +1,13 @@
+%effect {
+  background-color: $backdrop_color;
+  // backdrop-filter: blur(0.6rem);
+  // border-radius: 0.3rem;
+  // box-shadow: $shadow;
+  overflow: hidden;
+  border: none;
+}
+
+%text {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}

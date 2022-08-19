@@ -1,0 +1,84 @@
+.page-box-2 {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+
+  .swiper {
+    max-width: 70rem;
+    width: 100%;
+
+    .swiper-wrapper {
+      flex-direction: initial;
+      max-height: 35rem;
+
+      .swiper-slide {
+        padding: 2rem;
+        height: 50%;
+
+        .swiper-card {
+          padding: 1rem;
+          height: 100%;
+
+          .swiper-card-head {
+            display: flex;
+            height: 40%;
+
+            .swiper-img-box {
+              justify-content: center;
+              align-items: center;
+              @extend %effect;
+              max-width: 7rem;
+              min-width: 7rem;
+              padding: 0.5rem;
+              display: flex;
+
+              img {
+                max-height: 100%;
+                max-width: 100%;
+              }
+
+              @media (max-width: 420px) {
+                max-width: 5.5rem;
+                min-width: 5.5rem;
+              }
+            }
+
+            .swiper-title {
+              justify-content: center;
+              align-items: center;
+              font-size: 1.25rem;
+              font-weight: bold;
+              display: flex;
+              flex-grow: 1;
+            }
+          }
+
+          .swiper-card-body {
+            max-height: calc(56%);
+            overflow-y: auto;
+            margin-top: 4%;
+            @extend %text;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      max-width: 30rem;
+
+      .swiper-wrapper .swiper-slide {
+        padding: 1rem 2rem;
+
+        .swiper-card {
+          max-height: 12.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
