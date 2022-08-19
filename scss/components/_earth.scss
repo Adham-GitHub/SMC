@@ -1,13 +1,13 @@
 #earth-container {
   transform: translate(50%, 50%);
-  transition: 850ms ease-in-out;
+  transition: 750ms ease-in-out;
   pointer-events: none;
   position: fixed;
   bottom: 50%;
   right: 50%;
 
   #earth-box {
-    transition: 850ms ease-in-out;
+    transition: 750ms ease-in-out;
     border-radius: 100%;
     position: relative;
     max-height: 110rem;
@@ -19,7 +19,7 @@
     width: 30rem;
 
     #earth-wrapper {
-      transition: 850ms ease-in-out;
+      transition: 750ms ease-in-out;
       position: absolute;
       
       // FOR EARTH.WEBM

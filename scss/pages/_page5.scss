@@ -1,4 +1,4 @@
-.page-box-6 {
+.page-box-5 {
   padding: 0 1rem;
 
   .swiper {
@@ -110,6 +110,25 @@
 
     @media (max-width: 929px) {
       max-width: 30rem;
+    }
+  }
+
+  #astronaut {
+    animation-iteration-count: infinite;
+    transition: 1.45s ease-in-out;
+    animation-name: astronaut;
+    animation-duration: 6s;
+    pointer-events: none;
+    position: absolute;
+    right: -20rem;
+    height: 35vh;
+    z-index: -1;
+    top: 8rem;
+  }
+
+  @keyframes astronaut {
+    50% {
+      transform: translateY(0.8rem);
     }
   }
 }

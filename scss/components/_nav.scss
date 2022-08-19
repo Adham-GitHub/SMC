@@ -11,16 +11,29 @@ nav {
   left: 0;
   top: 0;
 
-  #logo {
-    cursor: pointer;
-    width: 6rem;
+  .left-panel {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
 
-    img {
-      width: 100%;
+    #logo {
+      cursor: pointer;
+      width: 6rem;
+
+      img {
+        width: 100%;
+      }
     }
 
-    @media (max-width: 600px) {
-      width: 5rem;
+    .header-box {
+      justify-content: center;
+      display: flex;
+      flex-grow: 1;
+
+      .header {
+        transform: translateY(-2px);
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -28,26 +41,34 @@ nav {
     display: flex;
 
     a {
-      padding: 0.6rem 1rem;
+      padding-bottom: 0.6rem;
+      padding-top: 0.6rem;
+      padding-right: 1rem;
+
       &:not(:last-child) {
         border-right: 1px solid #acfb;
+      }
+
+      &:not(:first-child) {
+        padding-left: 1rem;
       }
     }
   }
 
   #page-controls {
+    transform: scale(0.45);
     position: fixed;
-    right: 1.5rem;
-    top: 1.5rem;
+    right: -8.5rem;
+    top: 0.5rem;
 
     #page-controls-wrapper {
       position: relative;
       display: flex;
 
       .page-control {
+        height: $page_controller_width;
+        width: $page_controller_width;
         cursor: pointer;
-        height: 30px;
-        width: 30px;
 
         svg {
           height: 100%;
@@ -57,7 +78,7 @@ nav {
             r: calc(50% - $page_controller_line_width);
             stroke-width: $page_controller_line_width;
             stroke-dasharray: 255;
-            stroke-linecap: round;
+            // stroke-linecap: round;
             stroke: #fff4;
             fill: none;
             cy: 50%;
@@ -76,32 +97,42 @@ nav {
         }
 
         &:not(:last-of-type) {
-          margin-right: 0.5rem;
+          margin-right: 1.5rem;
         }
       }
     }
 
     #page-dot {
+      left: calc(($page_controller_width - $dot_width) / 2);
       transition: 350ms ease-in-out;
       transform: translateY(50%);
       background-color: #fff;
-      border-radius: 0.2rem;
+      border-radius: 4px;
       position: absolute;
+      height: $dot_width;
+      width: $dot_width;
       bottom: 50%;
-      height: 6px;
-      width: 6px;
-      left: 12px;
     }
   }
 
   @media (max-width: 767px) {
     padding-right: 2.5rem;
 
+    .left-panel {
+      #logo {
+        width: 5rem;
+      }
+
+      .header-box .header {
+        font-size: 1.25rem;
+      }
+    }
+
     #page-controls {
-      transform: rotate(90deg) scale(0.9);
+      transform: rotate(90deg) scale(0.45);
       position: fixed;
-      right: -6.75rem;
-      top: 8.25rem;
+      right: -17.5rem;
+      top: 8.1rem;
       z-index: 1;
     }
   }
