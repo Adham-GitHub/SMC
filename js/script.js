@@ -391,7 +391,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const selectHead = document.getElementById("selectHead");
   const selectBody = selectHead.nextElementSibling;
 
-  selectHead.addEventListener("click", () => {
+  const selectOpenCloser = () => {
     if (selectBody.style.height) {
       selectBody.style.height = "";
       selectHead.previousElementSibling.blur();
@@ -399,6 +399,12 @@ window.addEventListener("DOMContentLoaded", () => {
       selectBody.style.height = selectBody.scrollHeight + "px";
       selectHead.previousElementSibling.focus();
     }
+  };
+
+  selectHead.addEventListener("click", selectOpenCloser);
+  selectBody.addEventListener("click", (e) => {
+    e.preventDefault();
+    selectOpenCloser();
   });
 
   $(() => $(":input").inputmask());
