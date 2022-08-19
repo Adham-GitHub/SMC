@@ -388,7 +388,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // FORM ///////////////////////////////////////////////////////////////////
-  const selectHead = document.getElementById("selectHead");
+  const selectHead = document.getElementById("selectHead");;
   const selectBody = selectHead.nextElementSibling;
 
   const selectOpener = () => {
@@ -401,12 +401,10 @@ window.addEventListener("DOMContentLoaded", () => {
     selectHead.previousElementSibling.blur();
   };
 
-  selectHead.addEventListener("click", () => {
+  document.addEventListener("click", (e) => {
+    if (e.target.id === "selectHead") return selectOpener();
     if (selectBody.style.height) selectCloser();
-    else selectOpener();
   });
-
-  selectBody.addEventListener("click", selectCloser);
 
   $(() => $(":input").inputmask());
 

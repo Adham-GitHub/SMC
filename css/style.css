@@ -226,11 +226,11 @@ main .page .author {
 #earth-container #earth-box #earth-wrapper {
   transition: 850ms ease-in-out;
   position: absolute;
-  transform: rotate(85deg);
-  height: 226%;
-  width: 226%;
-  left: -63%;
-  top: -63%;
+  transform: rotate(103deg);
+  height: 210%;
+  width: 210%;
+  left: -55%;
+  top: -55%;
 }
 #earth-container #earth-box #earth-wrapper #earth {
   height: 100%;
