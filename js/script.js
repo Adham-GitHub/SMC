@@ -391,21 +391,22 @@ window.addEventListener("DOMContentLoaded", () => {
   const selectHead = document.getElementById("selectHead");
   const selectBody = selectHead.nextElementSibling;
 
-  const selectOpenCloser = () => {
-    if (selectBody.style.height) {
-      selectBody.style.height = "";
-      selectHead.previousElementSibling.blur();
-    } else {
-      selectBody.style.height = selectBody.scrollHeight + "px";
-      selectHead.previousElementSibling.focus();
-    }
+  const selectOpener = () => {
+    selectBody.style.height = selectBody.scrollHeight + "px";
+    selectHead.previousElementSibling.focus();
   };
 
-  selectHead.addEventListener("click", selectOpenCloser);
-  selectBody.addEventListener("click", (e) => {
-    e.preventDefault();
-    selectOpenCloser();
+  const selectCloser = () => {
+    selectBody.style.height = "";
+    selectHead.previousElementSibling.blur();
+  };
+
+  selectHead.addEventListener("click", () => {
+    if (selectBody.style.height) selectCloser();
+    else selectOpener();
   });
+
+  selectBody.addEventListener("click", selectCloser);
 
   $(() => $(":input").inputmask());
 
