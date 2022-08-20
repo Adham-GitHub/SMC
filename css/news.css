@@ -1,17 +1,49 @@
+*,
+::after,
+::before {
+  scrollbar-color: #234 rgba(255, 255, 255, 0.2666666667);
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  z-index: 1000;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2666666667);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #234;
+  border-radius: 10px;
+}
+
+html {
+  background-color: #012;
+}
+
 body {
+  background-image: url("../images/cosmos.png");
   font-family: Arial, Helvetica, sans-serif;
-  background: #000;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
   color: #fff;
   margin: 0;
 }
 body .news {
-  max-width: 70rem;
+  max-width: 65rem;
+  max-height: 90vh;
   display: flex;
   margin: auto;
 }
 body .news .today-news {
-  background-color: rgba(221, 0, 0, 0.2666666667);
-  padding: 0 2.5rem;
+  padding: 0 1.25rem;
   flex-grow: 1;
 }
 body .news .today-news .title {
@@ -27,13 +59,15 @@ body .news .today-news .banner {
   display: flex;
 }
 body .news .today-news .banner img {
+  object-fit: cover;
   height: 100%;
+  width: 100%;
 }
 body .news .today-news .date-views {
   justify-content: space-between;
-  background-color: blue;
+  line-height: 1.25rem;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   display: flex;
   height: 3rem;
 }
@@ -42,17 +76,71 @@ body .news .today-news .date-views .views {
   display: flex;
   height: 100%;
 }
+body .news .today-news .date-views .views .views-icon {
+  padding-right: 0.5rem;
+}
 body .news .today-news .paragraph {
-  white-space: pre-line;
+  height: calc(100% - 30rem);
+  font-size: 0.9rem;
+  overflow-y: auto;
 }
 body .news .other-news {
-  background-color: rgba(221, 221, 0, 0.2666666667);
-  padding: 0 2.5rem;
-  min-width: 22rem;
+  min-width: 24rem;
+  padding: 0 1rem;
 }
 body .news .other-news .title {
   text-align: center;
+  padding: 1.25rem 0;
   font-size: 1.5rem;
+}
+body .news .other-news .other-news-box {
+  height: calc(100% - 4rem);
+  padding: 0 1rem;
+  overflow: auto;
+  width: 100%;
+}
+body .news .other-news .other-news-box .other-news-item {
+  height: 20rem;
+  width: 100%;
+}
+body .news .other-news .other-news-box .other-news-item .banner {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  max-height: 11rem;
+  min-height: 11rem;
+  overflow: hidden;
+  display: flex;
+}
+body .news .other-news .other-news-box .other-news-item .banner img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+body .news .other-news .other-news-box .other-news-item .date-views {
+  justify-content: space-between;
+  line-height: 0.95rem;
+  align-items: center;
+  font-size: 0.95rem;
+  height: 2.5rem;
+  display: flex;
+}
+body .news .other-news .other-news-box .other-news-item .date-views .views {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+body .news .other-news .other-news-box .other-news-item .date-views .views .views-icon {
+  padding-right: 0.25rem;
+}
+body .news .other-news .other-news-box .other-news-item .mini-title {
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+body .news .other-news .other-news-box .other-news-item .paragraph {
+  font-size: 0.9rem;
+  overflow-y: auto;
+  height: 2rem;
 }
 
 /*# sourceMappingURL=news.css.map */
