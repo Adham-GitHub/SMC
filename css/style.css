@@ -236,7 +236,7 @@ main .page .author {
   inset: 0;
 }
 #cosmos #stars {
-  background-image: url("../images/cosmos.png");
+  background-image: url("../images/cosmos.webp");
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   min-height: calc(100vw + 100vh);
@@ -1025,7 +1025,7 @@ nav #page-controls #page-dot {
   flex-grow: 1;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map {
-  background-image: url("../images/yandex.png");
+  background-image: url("../images/yandex.webp");
   background-position: center;
   background-size: 150%;
   margin: 1rem auto 0;
