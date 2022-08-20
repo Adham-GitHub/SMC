@@ -26,6 +26,15 @@ html {
   background-color: #012;
 }
 
+a {
+  transition: 250ms opacity;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: 0.75;
+}
+
 body {
   background-image: url("../images/cosmos.png");
   font-family: Arial, Helvetica, sans-serif;
@@ -100,6 +109,7 @@ body .news .other-news .other-news-box {
   width: 100%;
 }
 body .news .other-news .other-news-box .other-news-item {
+  display: block;
   height: 20rem;
   width: 100%;
 }

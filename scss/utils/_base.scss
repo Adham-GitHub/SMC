@@ -67,8 +67,8 @@ main {
   z-index: 1;
 
   .page {
-    transition: 550ms ease-in-out;
     transform: translateY(10rem);
+    @extend %transition_500;
     pointer-events: none;
     position: absolute;
     display: none;
@@ -99,6 +99,7 @@ main {
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
+      font-size: 0.9rem;
       position: fixed;
       color: #acf;
       display: flex;
@@ -134,10 +135,11 @@ main {
   bottom: 4rem !important;
 
   .swiper-pagination-bullet {
-    transition: 500ms ease-in-out background-color;
     box-shadow: inset 0 0 0 0.14rem #fff;
     background-color: transparent;
     margin: 0 1rem !important;
+    @extend %transition_500;
+    @extend %transition_bg;
     height: 1rem;
     width: 1rem;
   }
