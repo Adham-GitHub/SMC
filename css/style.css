@@ -15,6 +15,64 @@
   line-height: 1.35;
 }
 
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child input,
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea,
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body .select-child, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a, .page-box-3 .accordions-wrapper .swiper .tab-menu .tab {
+  transition-duration: 250ms;
+}
+
+.page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title .indicator span {
+  transition-duration: 300ms;
+}
+
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body, nav #page-controls #page-dot, nav .left-panel .menu-wrapper #menu {
+  transition-duration: 350ms;
+}
+
+.page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion {
+  transition-duration: 500ms;
+}
+
+.page-box-3 .accordions-wrapper .accordions .accordion-wrapper, #earth-container #earth-box #earth-wrapper, #earth-container #earth-box, #earth-container {
+  transition-duration: 750ms;
+}
+
+nav #page-controls #page-controls-wrapper .page-control svg .control-svg {
+  transition-duration: 1000ms;
+}
+
+.page-box-5 #astronaut {
+  transition: 1450ms;
+}
+
+#earth-container #earth-box {
+  transition-property: width, height;
+}
+
+#earth-container {
+  transition-property: right, bottom;
+}
+
+.page-box-5 #astronaut {
+  transition-property: right, top;
+}
+
+.page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title .indicator span, #earth-container #earth-box #earth-wrapper {
+  transition-property: transform;
+}
+
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child input,
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea,
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body .select-child, .page-box-3 .accordions-wrapper .swiper .tab-menu .tab {
+  transition-property: background-color;
+}
+
+.page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a {
+  transition-property: opacity;
+}
+
 @media (max-width: 767px) {
   :root {
     font-size: 0.95rem;
@@ -205,14 +263,12 @@ main .page .author {
 }
 #earth-container {
   transform: translate(50%, 50%);
-  transition: 750ms ease-in-out;
   pointer-events: none;
   position: fixed;
   bottom: 50%;
   right: 50%;
 }
 #earth-container #earth-box {
-  transition: 750ms ease-in-out;
   border-radius: 100%;
   position: relative;
   max-height: 110rem;
@@ -224,7 +280,6 @@ main .page .author {
   width: 30rem;
 }
 #earth-container #earth-box #earth-wrapper {
-  transition: 750ms ease-in-out;
   position: absolute;
   transform: rotate(85deg);
   height: 226%;
@@ -251,7 +306,7 @@ main .page .author {
 
 nav {
   justify-content: space-between;
-  padding-right: 18.5rem;
+  padding-right: 15rem;
   padding-left: 1.5rem;
   align-items: center;
   height: 5rem;
@@ -274,14 +329,60 @@ nav .left-panel #logo {
 nav .left-panel #logo img {
   width: 100%;
 }
-nav .left-panel .header-box {
+nav .left-panel .menu-wrapper {
   justify-content: center;
+  position: relative;
   display: flex;
   flex-grow: 1;
 }
-nav .left-panel .header-box .header {
-  transform: translateY(-2px);
-  font-size: 1.5rem;
+nav .left-panel .menu-wrapper #menuButton {
+  transform: translateY(-1px);
+  margin-left: 1rem;
+  cursor: pointer;
+  padding: 1rem;
+  display: none;
+}
+nav .left-panel .menu-wrapper #menuButton * {
+  pointer-events: none;
+}
+nav .left-panel .menu-wrapper #menuButton:hover {
+  opacity: 0.75;
+}
+nav .left-panel .menu-wrapper #menuButton img {
+  width: 1.25rem;
+}
+nav .left-panel .menu-wrapper #menuButton span {
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+}
+nav .left-panel .menu-wrapper #menu {
+  display: flex;
+}
+nav .left-panel .menu-wrapper #menu .menu-item {
+  cursor: pointer;
+  padding: 1rem;
+}
+nav .left-panel .menu-wrapper #menu .menu-item:hover {
+  opacity: 0.75;
+}
+@media (max-width: 1100px) {
+  nav .left-panel .menu-wrapper {
+    flex-grow: initial;
+  }
+  nav .left-panel .menu-wrapper #menuButton {
+    align-items: center;
+    display: flex;
+  }
+  nav .left-panel .menu-wrapper #menu {
+    background-color: #012;
+    flex-direction: column;
+    position: absolute;
+    min-width: 12rem;
+    overflow: hidden;
+    height: 0;
+    top: 100%;
+    left: 0;
+  }
 }
 nav #lang {
   display: flex;
@@ -298,9 +399,9 @@ nav #lang a:not(:first-child) {
   padding-left: 1rem;
 }
 nav #page-controls {
-  transform: scale(0.45);
+  transform: scale(0.4);
   position: fixed;
-  right: -8.5rem;
+  right: -9rem;
   top: 0.5rem;
 }
 nav #page-controls #page-controls-wrapper {
@@ -326,7 +427,6 @@ nav #page-controls #page-controls-wrapper .page-control svg circle {
   cx: 50%;
 }
 nav #page-controls #page-controls-wrapper .page-control svg .control-svg {
-  transition: 1s ease-in-out;
   stroke: #fff !important;
   stroke-dashoffset: 255;
 }
@@ -334,11 +434,10 @@ nav #page-controls #page-controls-wrapper .page-control svg .control-svg.active 
   stroke-dashoffset: 0;
 }
 nav #page-controls #page-controls-wrapper .page-control:not(:last-of-type) {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 nav #page-controls #page-dot {
   left: 27.2px;
-  transition: 350ms ease-in-out;
   transform: translateY(50%);
   background-color: #fff;
   border-radius: 4px;
@@ -354,14 +453,11 @@ nav #page-controls #page-dot {
   nav .left-panel #logo {
     width: 5rem;
   }
-  nav .left-panel .header-box .header {
-    font-size: 1.25rem;
-  }
   nav #page-controls {
-    transform: rotate(90deg) scale(0.45);
+    transform: rotate(90deg) scale(0.4);
     position: fixed;
-    right: -17.5rem;
-    top: 8.1rem;
+    right: -16rem;
+    top: 6.75rem;
     z-index: 1;
   }
 }
@@ -478,7 +574,6 @@ nav #page-controls #page-dot {
   display: flex;
 }
 .page-box-3 .accordions-wrapper .swiper .tab-menu .tab {
-  transition: 250ms ease-in-out background-color;
   width: calc(25% - 1rem);
   justify-content: center;
   align-items: center;
@@ -501,7 +596,6 @@ nav #page-controls #page-dot {
   position: relative;
 }
 .page-box-3 .accordions-wrapper .accordions .accordion-wrapper {
-  transition: 700ms ease-in-out;
   transform: translateY(10rem);
   pointer-events: none;
   position: absolute;
@@ -515,7 +609,6 @@ nav #page-controls #page-dot {
 }
 .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion {
   max-height: calc(100% - 8.5rem);
-  transition: 500ms ease-in-out;
   height: 3.2rem;
 }
 .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion:not(:last-child) {
@@ -562,13 +655,11 @@ nav #page-controls #page-dot {
   bottom: 50%;
 }
 .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title .indicator span {
-  transition: 300ms ease-in-out transform;
   transform: rotate(45deg);
   pointer-events: none;
   font-size: 1.25rem;
 }
 .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body {
-  transition: 500ms ease-in-out;
   padding: 0 1rem;
 }
 .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body .accordion-body-box {
@@ -745,7 +836,6 @@ nav #page-controls #page-dot {
   display: flex;
 }
 .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a {
-  transition: 250ms ease-in-out;
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -791,7 +881,6 @@ nav #page-controls #page-dot {
 }
 .page-box-5 #astronaut {
   animation-iteration-count: infinite;
-  transition: 1.45s ease-in-out;
   animation-name: astronaut;
   animation-duration: 6s;
   pointer-events: none;
@@ -838,7 +927,6 @@ nav #page-controls #page-dot {
   width: 100%;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body {
-  transition: 200ms ease-in-out;
   background-color: #012;
   top: calc(100% + 0.5rem);
   position: absolute;
@@ -850,7 +938,6 @@ nav #page-controls #page-dot {
   left: 0;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body .select-child {
-  transition: 200ms ease-in-out background-color;
   justify-content: space-between;
   padding: 0.75rem 1rem;
   align-items: center;
@@ -872,7 +959,6 @@ nav #page-controls #page-dot {
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child input,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button {
-  transition: 200ms ease-in-out background-color;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   padding: 1rem;

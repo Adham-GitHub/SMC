@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  margin: 0;
+}
+body .news {
+  max-width: 70rem;
+  display: flex;
+  margin: auto;
+}
+body .news .today-news {
+  background-color: rgba(221, 0, 0, 0.2666666667);
+  padding: 0 2.5rem;
+  flex-grow: 1;
+}
+body .news .today-news .title {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+body .news .today-news .banner {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  display: flex;
+}
+body .news .today-news .banner img {
+  height: 100%;
+}
+body .news .today-news .date-views {
+  justify-content: space-between;
+  background-color: blue;
+  align-items: center;
+  font-size: 1.5rem;
+  display: flex;
+  height: 3rem;
+}
+body .news .today-news .date-views .views {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+body .news .today-news .paragraph {
+  white-space: pre-line;
+}
+body .news .other-news {
+  background-color: rgba(221, 221, 0, 0.2666666667);
+  padding: 0 2.5rem;
+  min-width: 22rem;
+}
+body .news .other-news .title {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=news.css.map */

@@ -16,7 +16,8 @@
         display: flex;
 
         .tab {
-          transition: 250ms ease-in-out background-color;
+          @extend %transition_250;
+          @extend %transition_bg;
           width: calc(100% / 4 - 1rem);
           justify-content: center;
           align-items: center;
@@ -48,7 +49,7 @@
       position: relative;
 
       .accordion-wrapper {
-        transition: 700ms ease-in-out;
+        @extend %transition_750;
         transform: translateY(10rem);
         pointer-events: none;
         position: absolute;
@@ -63,7 +64,7 @@
 
         .accordion {
           max-height: calc(100% - 8.5rem);
-          transition: 500ms ease-in-out;
+          @extend %transition_500;
           @extend %effect;
           height: 3.2rem;
 
@@ -114,7 +115,8 @@
               bottom: 50%;
 
               span {
-                transition: 300ms ease-in-out transform;
+                @extend %transition_300;
+                @extend %transition_tr;
                 transform: rotate(45deg);
                 pointer-events: none;
                 font-size: 1.25rem;
@@ -123,7 +125,7 @@
           }
 
           .accordion-body {
-            transition: 500ms ease-in-out;
+            @extend %transition_500;
             padding: 0 1rem;
 
             .accordion-body-box {

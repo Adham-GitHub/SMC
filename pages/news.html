@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/svg/logo_white.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/news.css" />
+    <title>Yangiliklar</title>
+  </head>
+  <body>
+    <main class="news">
+      <section class="today-news">
+        <div class="title">Bugungi yangiliklar</div>
+        <div class="banner">
+          <img src="../images/svg/smc_logo.svg" alt="banner" />
+        </div>
+        <div class="date-views">
+          <div class="date">20.02.22</div>
+          <div class="views">
+            <span class="views-icon">&#128065;</span>
+            <span class="views-score">346</span>
+          </div>
+        </div>
+        <p class="paragraph">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt
+          obcaecati, reprehenderit alias voluptas cupiditate ex quae
+          praesentium quia consequatur provident facere saepe deleniti libero
+          sit odio similique repellendus! Perferendis suscipit voluptatem
+          minima explicabo, natus blanditiis, temporibus repellendus eos
+
+          laboriosam eaque veritatis, reiciendis totam similique recusandae
+          sit consectetur quidem rerum? Ea maiores obcaecati nisi provident
+          reiciendis unde quidem recusandae quod possimus distinctio! Delectus
+          ut perferendis blanditiis ipsam fuga expedita ipsum fugit
+          necessitatibus obcaecati nemo porro pariatur et iste velit illo,
+          
+          accusamus minus temporibus. Est magni dolorem nulla, earum atque
+          exercitationem dolore! Dolorem placeat deleniti distinctio magni
+          quas reprehenderit necessitatibus ratione repudiandae! Lorem ipsum
+          dolor, sit amet consectetur adipisicing elit. Saepe ipsum vel nobis
+          officia vero, a dolores eveniet quod, quisquam labore reiciendis
+          officiis eaque sequi consequatur rerum dolore! Sit iusto
+          consequuntur blanditiis laborum. Ut adipisci laboriosam quo
+          quibusdam natus quam reprehenderit reiciendis veniam dolor mollitia
+          officia laborum error sunt, esse commodi aut impedit hic labore.
+          Dolorum suscipit vel, ipsum soluta similique, velit eum eaque beatae
+          quis doloribus nisi blanditiis animi placeat quia reiciendis
+          assumenda. Rerum vel, officia quae distinctio voluptas animi sit?
+          Illo, culpa voluptatem iure at magni assumenda sunt quasi
+          perspiciatis est. Eos iste reiciendis eligendi, nesciunt sed alias
+          consequuntur.
+        </p>
+      </section>
+      <section class="other-news">
+        <div class="title">So'nggi yangiliklar</div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        direction: "vertical",
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

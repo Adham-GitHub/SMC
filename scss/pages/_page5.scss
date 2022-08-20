@@ -66,7 +66,8 @@
             display: flex;
 
             a {
-              transition: 250ms ease-in-out;
+              @extend %transition_250;
+              @extend %transition_op;
               height: 1.5rem;
               width: 1.5rem;
 
@@ -115,8 +116,9 @@
 
   #astronaut {
     animation-iteration-count: infinite;
-    transition: 1.45s ease-in-out;
     animation-name: astronaut;
+    @extend %transition_1450;
+    @extend %transition_r_t;
     animation-duration: 6s;
     pointer-events: none;
     position: absolute;

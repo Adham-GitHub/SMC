@@ -35,9 +35,9 @@
               }
 
               .select-body {
-                transition: 200ms ease-in-out;
                 background-color: $bg_color;
                 top: calc(100% + 0.5rem);
+                @extend %transition_350;
                 position: absolute;
                 max-height: 13rem;
                 overflow-y: auto;
@@ -48,8 +48,9 @@
                 left: 0;
 
                 .select-child {
-                  transition: 200ms ease-in-out background-color;
                   justify-content: space-between;
+                  @extend %transition_250;
+                  @extend %transition_bg;
                   padding: 0.75rem 1rem;
                   align-items: center;
                   position: relative;
@@ -76,8 +77,9 @@
             input,
             textarea,
             button {
-              transition: 200ms ease-in-out background-color;
               font-family: Arial, Helvetica, sans-serif;
+              @extend %transition_250;
+              @extend %transition_bg;
               font-size: 1.1rem;
               @extend %effect;
               padding: 1rem;

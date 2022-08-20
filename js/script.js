@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const pages = document.querySelectorAll(".page");
   const pageControlWidth = pageControls[0].offsetWidth;
   const astronaut = document.getElementById("astronaut").style;
+  const menuItems = document.querySelectorAll(".menu-item");
 
   const createEarthPositions = () => {
     const screen = document.body.offsetWidth;
@@ -80,11 +81,11 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   const setEarthPosition = (position) => {
-    earthWrapper.transform = position.rotate && `rotate(${position.rotate})`;
-    earthBox.height = position.height;
-    earthBox.width = position.width;
     earthContainer.bottom = position.bottom;
     earthContainer.right = position.right;
+    earthBox.height = position.height;
+    earthBox.width = position.width;
+    earthWrapper.transform = position.rotate && `rotate(${position.rotate})`;
   };
 
   const setControlSVGCircle = (state) => {
@@ -170,6 +171,10 @@ window.addEventListener("DOMContentLoaded", () => {
     );
 
     pageControls[i].addEventListener("click", () => {
+      goToPage(i);
+    });
+
+    menuItems[i].addEventListener("click", () => {
       goToPage(i);
     });
   }
@@ -408,6 +413,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // FORM ///////////////////////////////////////////////////////////////////
   const selectHead = document.getElementById("selectHead");
   const selectBody = selectHead.nextElementSibling;
+  const menu = document.getElementById("menu");
 
   const selectOpener = () => {
     selectBody.style.height = selectBody.scrollHeight + "px";
@@ -419,8 +425,14 @@ window.addEventListener("DOMContentLoaded", () => {
     selectHead.previousElementSibling.blur();
   };
 
-  pages[6].addEventListener("click", (e) => {
+  const menuOpener = () => (menu.style.height = menu.scrollHeight + "px");
+
+  const menuCloser = () => (menu.style.height = "");
+
+  document.addEventListener("click", (e) => {
+    if (e.target.id === "menuButton") return menuOpener();
     if (e.target.id === "selectHead") return selectOpener();
+    if (menu.style.height) menuCloser();
     if (selectBody.style.height) selectCloser();
   });
 

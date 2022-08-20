@@ -11,3 +11,61 @@
   font-size: 0.95rem;
   line-height: 1.35;
 }
+
+// TRANSITION DURATIONS
+%transition_250 {
+  transition-duration: 250ms;
+}
+
+%transition_300 {
+  transition-duration: 300ms;
+}
+
+%transition_350 {
+  transition-duration: 350ms;
+}
+
+%transition_500 {
+  transition-duration: 500ms;
+}
+
+%transition_750 {
+  transition-duration: 750ms;
+}
+
+%transition_1000 {
+  transition-duration: 1000ms;
+}
+
+%transition_1450 {
+  transition: 1450ms;
+}
+
+// TRANSITION PROPERTIES
+%transition_w_h {
+  transition-property: width, height;
+}
+
+%transition_r_b {
+  transition-property: right, bottom;
+}
+
+%transition_r_t {
+  transition-property: right, top;
+}
+
+%transition_tr {
+  transition-property: transform;
+}
+
+%transition_bg {
+  transition-property: background-color;
+}
+
+%transition_op {
+  transition-property: opacity;
+}
+
+// %transition_timing_function {
+//   transition-timing-function: ease-in-out;
+// }
