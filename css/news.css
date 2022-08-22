@@ -166,6 +166,7 @@ body .news .other-news .swiper-pagination .swiper-pagination-bullet {
     flex-direction: column;
   }
   body .news .other-news {
+    min-width: initial;
     width: 100%;
   }
   body .news .other-news .title {
