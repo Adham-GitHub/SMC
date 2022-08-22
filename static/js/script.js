@@ -138,7 +138,10 @@ window.addEventListener("DOMContentLoaded", () => {
       pages[state].classList.add("render");
 
       setTimeout(() => {
-        pages[state].classList.add("active");
+        setSwiper(state);
+        setTimeout(() => {
+          pages[state].classList.add("active");
+        }, 100);
       }, 100);
     }, 400);
   };
@@ -200,188 +203,186 @@ window.addEventListener("DOMContentLoaded", () => {
     e && createEarthPositions();
   });
 
-  window.matchMedia("(max-width: 768px)").addEventListener("change", (e) => {
-    if (e) {
-      swiper2.destroy();
-      swiper2 = swiper2Creator();
-
-      swiper3.destroy();
-      swiper3 = swiper3Creator();
-
-      swiper7.destroy();
-      swiper7 = swiper7Creator();
-    }
-  });
-
   // SWIPERS ///////////////////////////////////////////////////////////////////
-  new Swiper("#page-1", {
-    slidesPerView: 1,
-    grabCursor: true,
-    loop: true,
-    pagination: {
-      el: "#swiper-pagination-1",
-      clickable: true,
+  let currentSwiper;
+  const swipers = [
+    () => {
+      return new Swiper("#page-1", {
+        slidesPerView: 1,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: "#swiper-pagination-1",
+          clickable: true,
+        },
+        speed: 1500,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+      });
     },
-    speed: 1500,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-  });
+    () => {
+      if (document.body.offsetWidth > 768) {
+        return new Swiper("#page-2", {
+          slidesPerView: 2,
+          grid: {
+            rows: 2,
+          },
+        });
+      }
 
-  const swiper2Creator = () => {
-    if (document.body.offsetWidth > 768) {
       return new Swiper("#page-2", {
-        slidesPerView: 2,
+        slidesPerView: 1,
+        grabCursor: true,
         grid: {
           rows: 2,
         },
+        pagination: {
+          el: "#swiper-pagination-2",
+          clickable: true,
+        },
+        speed: 1000,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
       });
-    }
+    },
+    () => {
+      if (document.body.offsetWidth > 768) {
+        return new Swiper("#page-3", {
+          slidesPerView: 4,
+          spaceBetween: 25,
+        });
+      }
 
-    return new Swiper("#page-2", {
-      slidesPerView: 1,
-      grabCursor: true,
-      grid: {
-        rows: 2,
-      },
-      pagination: {
-        el: "#swiper-pagination-2",
-        clickable: true,
-      },
-      speed: 1000,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-    });
-  };
-
-  let swiper2 = swiper2Creator();
-
-  const swiper3Creator = () => {
-    if (document.body.offsetWidth > 768) {
       return new Swiper("#page-3", {
-        slidesPerView: 4,
-        spaceBetween: 25,
+        slidesPerView: 2,
+        spaceBetween: 15,
+        grabCursor: true,
+        speed: 1000,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
       });
-    }
-
-    return new Swiper("#page-3", {
-      slidesPerView: 2,
-      spaceBetween: 15,
-      grabCursor: true,
-      speed: 1000,
-      autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-      },
-    });
-  };
-
-  let swiper3 = swiper3Creator();
-
-  new Swiper("#page-4", {
-    slidesPerView: 1,
-    grabCursor: true,
-    loop: true,
-    pagination: {
-      el: "#swiper-pagination-4",
-      clickable: true,
     },
-    speed: 1000,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      600: {
+    () => {
+      return new Swiper("#page-4", {
         slidesPerView: 1,
-      },
-      930: {
-        slidesPerView: 2,
-      },
-      1300: {
-        slidesPerView: 3,
-      },
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: "#swiper-pagination-4",
+          clickable: true,
+        },
+        speed: 1000,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+          },
+          930: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+      });
     },
-  });
-
-  new Swiper("#page-5", {
-    slidesPerView: 1,
-    grabCursor: true,
-    pagination: {
-      el: "#swiper-pagination-5",
-      clickable: true,
-    },
-    speed: 1000,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      600: {
+    () => {
+      return new Swiper("#page-5", {
         slidesPerView: 1,
-      },
-      930: {
-        slidesPerView: 2,
-      },
-      1300: {
-        slidesPerView: 3,
-      },
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: "#swiper-pagination-5",
+          clickable: true,
+        },
+        speed: 1000,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+          },
+          930: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+      });
     },
-  });
-
-  new Swiper("#page-6", {
-    slidesPerView: 1,
-    grabCursor: true,
-    loop: true,
-    navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
-    },
-    speed: 1000,
-    autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      600: {
+    () => {
+      return new Swiper("#page-6", {
         slidesPerView: 1,
-      },
-      930: {
-        slidesPerView: 2,
-      },
-      1300: {
-        slidesPerView: 3,
-      },
+        grabCursor: true,
+        loop: true,
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+        speed: 1000,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+          },
+          930: {
+            slidesPerView: 2,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+      });
     },
-  });
+    () => {
+      if (document.body.offsetWidth > 768) {
+        return new Swiper("#page-7", {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        });
+      }
 
-  const swiper7Creator = () => {
-    if (document.body.offsetWidth > 768) {
       return new Swiper("#page-7", {
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween: 50,
+        grabCursor: true,
+        pagination: {
+          el: "#swiper-pagination-7",
+          clickable: true,
+        },
+        speed: 1000,
+        autoplay: {
+          delay: 3500,
+        },
       });
-    }
+    },
+  ];
 
-    return new Swiper("#page-7", {
-      slidesPerView: 1,
-      spaceBetween: 50,
-      grabCursor: true,
-      pagination: {
-        el: "#swiper-pagination-7",
-        clickable: true,
-      },
-      speed: 1000,
-      autoplay: {
-        delay: 3500,
-      },
-    });
+  const setSwiper = (state) => {
+    if (currentSwiper) currentSwiper.destroy();
+    currentSwiper = swipers[state]();
   };
 
-  let swiper7 = swiper7Creator();
+  setSwiper(activePage);
+
+  window.matchMedia("(max-width: 768px)").addEventListener("change", (e) => {
+    e && setSwiper(activePage);
+  });
 
   // ACCORDIONS ///////////////////////////////////////////////////////////////////
   const tabs = document.getElementsByClassName("tab");
