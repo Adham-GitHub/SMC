@@ -431,8 +431,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const menuCloser = () => (menu.style.height = "");
 
   document.addEventListener("click", (e) => {
-    if (e.target.id === "menuButton") return menuOpener();
-    if (e.target.id === "selectHead") return selectOpener();
+    if (e.target.id === "menuButton" && !menu.style.height) return menuOpener();
+    if (e.target.id === "selectHead" && !selectBody.style.height) return selectOpener();
     if (menu.style.height) menuCloser();
     if (selectBody.style.height) selectCloser();
   });
