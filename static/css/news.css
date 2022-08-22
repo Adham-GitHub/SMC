@@ -36,7 +36,7 @@ a:hover {
 }
 
 body {
-  background-image: url("../images/cosmos.webp");
+  background-image: linear-gradient(135deg, rgba(34, 68, 221, 0.2117647059), rgba(0, 0, 0, 0), rgba(187, 34, 68, 0.1568627451)), url("../images/cosmos.webp");
   font-family: Arial, Helvetica, sans-serif;
   background-position: center;
   background-size: cover;
