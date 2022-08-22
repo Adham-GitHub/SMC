@@ -5,6 +5,11 @@ new Swiper(".swiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  speed: 2000,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     600: {
       direction: "horizontal",
