@@ -16,6 +16,7 @@
       .swiper-card {
         max-height: 26rem;
         @extend %effect;
+        flex-grow: 1;
         height: 100%;
 
         .swiper-head {

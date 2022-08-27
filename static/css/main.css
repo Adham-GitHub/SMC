@@ -695,6 +695,7 @@ nav #page-controls #page-dot {
 .page-box-4 .swiper .swiper-slide .swiper-card,
 .page-box-6 .swiper .swiper-slide .swiper-card {
   max-height: 26rem;
+  flex-grow: 1;
   height: 100%;
 }
 .page-box-4 .swiper .swiper-slide .swiper-card .swiper-head,
@@ -794,6 +795,7 @@ nav #page-controls #page-dot {
 }
 .page-box-5 .swiper .swiper-slide .swiper-card {
   text-align: center;
+  flex-grow: 1;
   height: 100%;
 }
 .page-box-5 .swiper .swiper-slide .swiper-card .swiper-head {
