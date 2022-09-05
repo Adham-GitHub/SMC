@@ -1,21 +1,18 @@
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child input,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea,
-.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body, .page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more a,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more a, .page-box-4 .swiper .swiper-slide .swiper-card,
-.page-box-6 .swiper .swiper-slide .swiper-card, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion, .page-box-3 .accordions-wrapper .swiper .tab-menu .tab, .page-box-2 .swiper .swiper-wrapper .swiper-slide .swiper-card .swiper-card-head .swiper-img-box {
+.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body, .page-box-6 .swiper .swiper-slide .swiper-card, .page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more a, .page-box-4 .swiper .swiper-slide .swiper-card, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion, .page-box-3 .accordions-wrapper .swiper .tab-menu .tab, .page-box-2 .swiper .swiper-wrapper .swiper-slide .swiper-card .swiper-card-head .swiper-img-box {
   background-color: rgba(170, 187, 255, 0.1333333333);
   overflow: hidden;
   border: none;
 }
 
-.page-box-7 .swiper .swiper-wrapper, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p, .page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body .accordion-body-box, .page-box-2 .swiper .swiper-wrapper .swiper-slide .swiper-card .swiper-card-body, main .page .author {
+.page-box-7 .swiper .swiper-wrapper, .page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body .accordion-body-box, .page-box-2 .swiper .swiper-wrapper .swiper-slide .swiper-card .swiper-card-body, main .page .author {
   font-size: 0.95rem;
   line-height: 1.35;
 }
 
-.page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child input,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body .select-child, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a, .page-box-3 .accordions-wrapper .swiper .tab-menu .tab {
@@ -30,7 +27,7 @@
   transition-duration: 350ms;
 }
 
-.page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion, .swiper-pagination .swiper-pagination-bullet, main .page {
+.page-box-6 .swiper .swiper-slide .swiper-card .swiper-head img, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-body, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion, .swiper-pagination .swiper-pagination-bullet, main .page {
   transition-duration: 500ms;
 }
 
@@ -58,7 +55,7 @@ nav #page-controls #page-controls-wrapper .page-control svg .control-svg {
   transition-property: right, top;
 }
 
-.page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title .indicator span, #earth-container #earth-box #earth-wrapper {
+.page-box-6 .swiper .swiper-slide .swiper-card .swiper-head img, .page-box-3 .accordions-wrapper .accordions .accordion-wrapper .accordion .accordion-title .indicator span, #earth-container #earth-box #earth-wrapper {
   transition-property: transform;
 }
 
@@ -69,7 +66,7 @@ nav #page-controls #page-controls-wrapper .page-control svg .control-svg {
   transition-property: background-color;
 }
 
-.page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a {
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a {
   transition-property: opacity;
 }
 
@@ -168,6 +165,7 @@ main .page [class^=page-box] {
 main .page .author {
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
   padding: 1rem 2rem;
   font-size: 0.9rem;
   position: fixed;
@@ -177,6 +175,9 @@ main .page .author {
   right: 0;
   left: 0;
 }
+main .page .author > * {
+  pointer-events: all;
+}
 @media (max-width: 500px) {
   main .page .author {
     padding: 1rem;
@@ -184,19 +185,25 @@ main .page .author {
 }
 
 .title {
+  text-transform: uppercase;
   justify-content: center;
   align-items: center;
+  font-size: 2.25rem;
   text-align: center;
   font-weight: bold;
-  font-size: 2.5rem;
   display: flex;
   height: 5rem;
 }
 @media (max-width: 768px) {
   .title {
     align-items: flex-start;
-    font-size: 1.8rem;
-    height: 3rem;
+    font-size: 1.9rem;
+    height: 2.5rem;
+  }
+}
+@media (max-height: 720px) {
+  .title {
+    font-size: 1.9rem;
   }
 }
 
@@ -362,6 +369,7 @@ nav .left-panel .menu-wrapper #menu {
   display: flex;
 }
 nav .left-panel .menu-wrapper #menu .menu-item {
+  text-transform: uppercase;
   cursor: pointer;
   padding: 1rem;
 }
@@ -675,106 +683,83 @@ nav #page-controls #page-dot {
   }
 }
 
-.page-box-4,
-.page-box-6 {
+.page-box-4 {
   padding: 0 1rem;
 }
-.page-box-4 .swiper,
-.page-box-6 .swiper {
+.page-box-4 .swiper {
   padding-bottom: 5rem;
   max-width: 85rem;
   width: 100%;
 }
-.page-box-4 .swiper .swiper-slide,
-.page-box-6 .swiper .swiper-slide {
+.page-box-4 .swiper .swiper-slide {
   align-items: center;
   padding: 3rem 2rem;
   max-height: 100%;
   display: flex;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card,
-.page-box-6 .swiper .swiper-slide .swiper-card {
+.page-box-4 .swiper .swiper-slide .swiper-card {
   max-height: 26rem;
   flex-grow: 1;
   height: 100%;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-head,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-head {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-head {
   background-color: #eee;
   height: 11rem;
   width: 100%;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-head img,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-head img {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-head img {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body {
   justify-content: space-between;
   height: calc(100% - 10.75rem);
   flex-direction: column;
   display: flex;
   padding: 1rem;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text {
   height: calc(100% - 3rem);
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text h3,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text h3 {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text h3 {
   text-align: center;
   margin: 0;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p {
   height: calc(100% - 2.2rem);
   overflow-y: auto;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more {
   padding-right: 0.5rem;
   justify-content: end;
   display: flex;
 }
-.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more a,
-.page-box-6 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more a {
+.page-box-4 .swiper .swiper-slide .swiper-card .swiper-body .swiper-more a {
   padding: 0.5rem 1.5rem;
 }
 @media (max-height: 720px) {
-  .page-box-4 .swiper .swiper-slide,
-.page-box-6 .swiper .swiper-slide {
+  .page-box-4 .swiper .swiper-slide {
     padding: 0.5rem 2rem;
   }
 }
 @media (max-width: 1550px) {
-  .page-box-4 .swiper,
-.page-box-6 .swiper {
+  .page-box-4 .swiper {
     max-width: 75rem;
   }
 }
 @media (max-width: 1440px) {
-  .page-box-4 .swiper,
-.page-box-6 .swiper {
+  .page-box-4 .swiper {
     max-width: 70rem;
   }
 }
 @media (max-width: 1299px) {
-  .page-box-4 .swiper,
-.page-box-6 .swiper {
+  .page-box-4 .swiper {
     max-width: 50rem;
   }
 }
 @media (max-width: 929px) {
-  .page-box-4 .swiper,
-.page-box-6 .swiper {
-    max-width: 30rem;
-  }
-}
-@media (max-width: 929px) {
-  .page-box-4 .swiper,
-.page-box-6 .swiper {
+  .page-box-4 .swiper {
     max-width: 30rem;
   }
 }
@@ -830,10 +815,6 @@ nav #page-controls #page-dot {
 .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text .swiper-job-title {
   padding-top: 0.5rem;
   color: #ccc;
-}
-.page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-text p {
-  height: calc(100% - 2.2rem);
-  overflow-y: auto;
 }
 .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links {
   justify-content: center;
@@ -901,8 +882,104 @@ nav #page-controls #page-dot {
   }
 }
 
+.page-box-6 {
+  padding: 0 1rem;
+}
+.page-box-6 .title {
+  align-items: center;
+  height: 4rem;
+}
+.page-box-6 > * {
+  padding-bottom: 3rem;
+  position: relative;
+}
+.page-box-6 .swiper {
+  max-width: 85rem;
+  width: 100%;
+}
+.page-box-6 .swiper .swiper-slide {
+  padding: 1rem 2rem 1.5rem;
+  align-items: center;
+  display: flex;
+}
+.page-box-6 .swiper .swiper-slide .swiper-card {
+  max-height: 26rem;
+  flex-grow: 1;
+  height: 100%;
+}
+.page-box-6 .swiper .swiper-slide .swiper-card .swiper-head {
+  background-color: #eee;
+  overflow: hidden;
+  height: 8rem;
+  width: 100%;
+}
+.page-box-6 .swiper .swiper-slide .swiper-card .swiper-head img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.page-box-6 .swiper .swiper-slide .swiper-card .swiper-text {
+  justify-content: center;
+  padding: 1rem 0.5rem;
+  align-items: center;
+  display: flex;
+  margin: 0;
+}
+.page-box-6 .swiper .swiper-slide .swiper-card:hover .swiper-head img {
+  transform: scale(1.15);
+}
+@media (max-width: 1550px) {
+  .page-box-6 .swiper {
+    max-width: 75rem;
+  }
+}
+@media (max-width: 1440px) {
+  .page-box-6 .swiper {
+    max-width: 70rem;
+  }
+  .page-box-6 .swiper .swiper-slide {
+    padding: 1rem 1.5rem;
+  }
+}
+@media (max-width: 1299px) {
+  .page-box-6 .swiper {
+    max-width: 60rem;
+  }
+}
+@media (max-width: 1140px) {
+  .page-box-6 .swiper {
+    max-width: 55rem;
+  }
+}
+@media (max-width: 1040px) {
+  .page-box-6 .swiper {
+    max-width: 45rem;
+  }
+  .page-box-6 .swiper .swiper-slide {
+    padding: 1rem 3rem;
+  }
+}
+@media (max-width: 879px) {
+  .page-box-6 .swiper {
+    max-width: 25rem;
+  }
+}
+@media (max-height: 720px) {
+  .page-box-6 > * {
+    padding-bottom: 1.5rem;
+  }
+  .page-box-6 .swiper .swiper-slide {
+    padding: 1rem 3rem;
+  }
+  .page-box-6 .title {
+    align-items: flex-end;
+    height: 2.5rem;
+  }
+}
+
 .page-box-7 {
   padding: 0 2.5rem;
+  z-index: 0;
 }
 .page-box-7 .swiper {
   padding: 1rem 0 2rem;
@@ -985,10 +1062,10 @@ nav #page-controls #page-dot {
   }
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea {
+  min-height: 3.25rem;
   resize: vertical;
   overflow-y: auto;
   max-height: 8rem;
-  min-height: 3rem;
   height: 7rem;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button {
@@ -1004,10 +1081,13 @@ nav #page-controls #page-dot {
   }
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts {
-  height: 93%;
+  height: calc(100% - 2.6rem);
+  flex-direction: column;
+  display: flex;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box {
   align-items: center;
+  max-height: 3.5rem;
   padding: 0.5rem;
   display: flex;
 }
@@ -1016,28 +1096,82 @@ nav #page-controls #page-dot {
   align-items: center;
   overflow: hidden;
   display: flex;
-  height: 3rem;
   width: 3rem;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box .contact-img-box img {
   width: 1.25rem;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box .contact-content {
-  padding: 1rem;
+  padding: 0.25rem 1rem;
   flex-grow: 1;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 4rem;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a:not(:last-child) {
+  margin-right: 2rem;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a:hover {
+  opacity: 0.75;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a img {
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials {
+    height: 3.3rem;
+  }
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map {
   background-image: url("../images/yandex.webp");
   background-position: center;
   background-size: 150%;
   margin: 1rem auto 0;
-  height: 47%;
-  width: 97%;
+  flex-grow: 1;
+  width: 100%;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map #map {
+  max-height: 305px;
+  height: 100%;
+  width: 100%;
 }
 @media (max-height: 700px) {
   .page-box-7 .swiper .swiper-wrapper {
     max-height: 30rem;
   }
+  .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map #map {
+    max-height: 213px;
+  }
+}
+@media (min-width: 768px) {
+  .page-box-7 .swiper .swiper-wrapper {
+    grid-template-columns: repeat(2, calc(50% - 2rem));
+    display: grid;
+    gap: 4rem;
+  }
+  .page-box-7 .swiper-pagination {
+    display: none;
+  }
+}
+
+[class*=copyrights-pane] {
+  display: none !important;
+}
+
+.ymaps-2-1-79-placemark-overlay {
+  filter: hue-rotate(140deg) contrast(1.5);
+}
+
+.ymaps-2-1-79-controls__control {
+  bottom: 10px !important;
 }
 
 /*# sourceMappingURL=main.css.map */

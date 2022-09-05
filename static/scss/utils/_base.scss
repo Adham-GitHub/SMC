@@ -99,6 +99,7 @@ main {
     .author {
       justify-content: space-between;
       align-items: center;
+      pointer-events: none;
       padding: 1rem 2rem;
       font-size: 0.9rem;
       position: fixed;
@@ -109,6 +110,10 @@ main {
       right: 0;
       left: 0;
 
+      & > * {
+        pointer-events: all;
+      }
+
       @media (max-width: 500px) {
         padding: 1rem;
       }
@@ -117,18 +122,23 @@ main {
 }
 
 .title {
+  text-transform: uppercase;
   justify-content: center;
   align-items: center;
+  font-size: 2.25rem;
   text-align: center;
   font-weight: bold;
-  font-size: 2.5rem;
   display: flex;
   height: 5rem;
 
   @media (max-width: 768px) {
     align-items: flex-start;
-    font-size: 1.8rem;
-    height: 3rem;
+    font-size: 1.9rem;
+    height: 2.5rem;
+  }
+
+  @media (max-height: 720px) {
+    font-size: 1.9rem;
   }
 }
 

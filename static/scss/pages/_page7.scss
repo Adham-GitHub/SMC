@@ -1,5 +1,6 @@
 .page-box-7 {
   padding: 0 2.5rem;
+  z-index: 0;
 
   .swiper {
     padding: 1rem 0 2rem;
@@ -96,10 +97,10 @@
             }
 
             textarea {
+              min-height: 3.25rem;
               resize: vertical;
               overflow-y: auto;
               max-height: 8rem;
-              min-height: 3rem;
               height: 7rem;
             }
 
@@ -121,12 +122,15 @@
         }
 
         .contacts {
+          height: calc(100% - 2.6rem);
+          flex-direction: column;
           @extend %effect;
-          height: 93%;
+          display: flex;
 
           .contact {
             .contact-box {
               align-items: center;
+              max-height: 3.5rem;
               padding: 0.5rem;
               display: flex;
 
@@ -135,7 +139,6 @@
                 align-items: center;
                 overflow: hidden;
                 display: flex;
-                height: 3rem;
                 width: 3rem;
 
                 img {
@@ -144,9 +147,40 @@
               }
 
               .contact-content {
-                padding: 1rem;
+                padding: 0.25rem 1rem;
                 flex-grow: 1;
               }
+            }
+          }
+
+          .socials {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            height: 4rem;
+
+            a {
+              @extend %transition_250;
+              @extend %transition_op;
+              height: 1.5rem;
+              width: 1.5rem;
+
+              &:not(:last-child) {
+                margin-right: 2rem;
+              }
+
+              &:hover {
+                opacity: 0.75;
+              }
+
+              img {
+                height: 100%;
+                width: 100%;
+              }
+            }
+
+            @media (max-width: 767px) {
+              height: 3.3rem;
             }
           }
 
@@ -155,15 +189,49 @@
             background-position: center;
             background-size: 150%;
             margin: 1rem auto 0;
-            height: 47%;
-            width: 97%;
+            flex-grow: 1;
+            width: 100%;
+
+            #map {
+              max-height: 305px;
+              height: 100%;
+              width: 100%;
+            }
           }
         }
       }
 
       @media (max-height: 700px) {
         max-height: 30rem;
+
+        .swiper-slide .contacts .map #map {
+          max-height: 213px;
+        }
       }
     }
   }
+
+  @media (min-width: 768px) {
+    .swiper .swiper-wrapper {
+      grid-template-columns: repeat(2, calc(50% - 2rem));
+      display: grid;
+      gap: 4rem;
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+.ymaps-2-1-79-placemark-overlay {
+  filter: hue-rotate(140deg) contrast(1.5);
+}
+
+.ymaps-2-1-79-controls__control {
+  bottom: 10px !important;
 }

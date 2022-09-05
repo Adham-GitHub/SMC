@@ -1,5 +1,4 @@
-.page-box-4,
-.page-box-6 {
+.page-box-4 {
   padding: 0 1rem;
 
   .swiper {
@@ -81,10 +80,6 @@
 
     @media (max-width: 1299px) {
       max-width: 50rem;
-    }
-
-    @media (max-width: 929px) {
-      max-width: 30rem;
     }
 
     @media (max-width: 929px) {
