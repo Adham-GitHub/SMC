@@ -12,7 +12,7 @@
   line-height: 1.35;
 }
 
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file a, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child [name=select_controller],
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child input,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child textarea,
 .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child button, .page-box-7 .swiper .swiper-wrapper .swiper-slide form .form-child .select .select-body .select-child, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a, .page-box-3 .accordions-wrapper .swiper .tab-menu .tab {
@@ -66,7 +66,7 @@ nav #page-controls #page-controls-wrapper .page-control svg .control-svg {
   transition-property: background-color;
 }
 
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a {
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file a, .page-box-5 .swiper .swiper-slide .swiper-card .swiper-body .swiper-links a {
   transition-property: opacity;
 }
 
@@ -376,7 +376,7 @@ nav .left-panel .menu-wrapper #menu .menu-item {
 nav .left-panel .menu-wrapper #menu .menu-item:hover {
   opacity: 0.75;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1345px) {
   nav .left-panel .menu-wrapper {
     flex-grow: initial;
   }
@@ -482,6 +482,7 @@ nav #page-controls #page-dot {
 }
 .page-box-1 .swiper .swiper-slide .title {
   padding-bottom: 5rem;
+  text-transform: initial;
   height: auto;
 }
 @media (max-width: 1099px) {
@@ -1081,14 +1082,15 @@ nav #page-controls #page-dot {
   }
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts {
-  height: calc(100% - 2.6rem);
+  height: calc(100% - 2.55rem);
   flex-direction: column;
+  padding: 0.5rem 0;
   display: flex;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box {
+  padding: 0.25rem 0.5rem;
   align-items: center;
-  max-height: 3.5rem;
-  padding: 0.5rem;
+  max-height: 2.25rem;
   display: flex;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box .contact-img-box {
@@ -1099,66 +1101,65 @@ nav #page-controls #page-dot {
   width: 3rem;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box .contact-img-box img {
+  height: 1.25rem;
   width: 1.25rem;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .contact .contact-box .contact-content {
   padding: 0.25rem 1rem;
   flex-grow: 1;
 }
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  height: 4rem;
-}
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a:not(:last-child) {
-  margin-right: 2rem;
-}
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a:hover {
-  opacity: 0.75;
-}
-.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials a img {
-  height: 100%;
-  width: 100%;
-}
-@media (max-width: 767px) {
-  .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .socials {
-    height: 3.3rem;
-  }
-}
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map {
   background-image: url("../images/yandex.webp");
   background-position: center;
   background-size: 150%;
-  margin: 1rem auto 0;
+  margin: 0.5rem 0;
   flex-grow: 1;
-  width: 100%;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map #map {
-  max-height: 305px;
+  max-height: 220px;
   height: 100%;
   width: 100%;
 }
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file {
+  padding: 0.5rem 1.25rem;
+  display: flex;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file a:hover {
+  opacity: 0.75;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file a img {
+  vertical-align: middle;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file a span {
+  padding-left: 0.75rem;
+}
 @media (max-height: 700px) {
   .page-box-7 .swiper .swiper-wrapper {
-    max-height: 30rem;
+    height: 31.55rem;
+  }
+  .page-box-7 .swiper .swiper-wrapper .contacts {
+    height: 100%;
   }
   .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map #map {
-    max-height: 213px;
+    max-height: 167px;
   }
 }
 @media (min-width: 768px) {
   .page-box-7 .swiper .swiper-wrapper {
-    grid-template-columns: repeat(2, calc(50% - 2rem));
+    grid-template-columns: repeat(2, calc(50% - 1rem));
     display: grid;
-    gap: 4rem;
+    gap: 2rem;
   }
   .page-box-7 .swiper-pagination {
     display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .page-box-7 .swiper .swiper-wrapper {
+    grid-template-columns: repeat(2, calc(50% - 2rem));
+    gap: 4rem;
   }
 }
 
