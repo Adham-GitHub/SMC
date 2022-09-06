@@ -163,7 +163,7 @@
             flex-grow: 1;
 
             #map {
-              max-height: 220px;
+              max-height: 231px;
               height: 100%;
               width: 100%;
             }
@@ -190,6 +190,10 @@
               span {
                 padding-left: 0.75rem;
               }
+            }
+
+            @media (max-width: 767px) {
+              padding: 0.2rem 1.25rem;
             }
           }
         }

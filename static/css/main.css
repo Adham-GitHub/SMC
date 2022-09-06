@@ -1116,7 +1116,7 @@ nav #page-controls #page-dot {
   flex-grow: 1;
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .map #map {
-  max-height: 220px;
+  max-height: 231px;
   height: 100%;
   width: 100%;
 }
@@ -1134,6 +1134,11 @@ nav #page-controls #page-dot {
 }
 .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file a span {
   padding-left: 0.75rem;
+}
+@media (max-width: 767px) {
+  .page-box-7 .swiper .swiper-wrapper .swiper-slide .contacts .word-file {
+    padding: 0.2rem 1.25rem;
+  }
 }
 @media (max-height: 700px) {
   .page-box-7 .swiper .swiper-wrapper {
