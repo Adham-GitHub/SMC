@@ -26,6 +26,7 @@
 
 html {
   background-color: $bg_color;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -39,7 +40,8 @@ a {
 }
 
 body {
-  background-image: linear-gradient(135deg, #2244dd36, #0000, #bb224428), url("../images/cosmos.webp");
+  background-image: linear-gradient(135deg, #2244dd36, #0000, #bb224428),
+    url("../images/cosmos.webp");
   font-family: Arial, Helvetica, sans-serif;
   background-position: center;
   background-size: cover;
@@ -120,9 +122,7 @@ body {
       }
 
       .paragraph {
-        // height: calc(100% - 30rem);
         font-size: 0.9rem;
-        // overflow-y: auto;
       }
     }
 
@@ -247,6 +247,37 @@ body {
         max-width: 20rem;
         margin: auto;
       }
+    }
+  }
+
+  #to-top {
+    background-color: #fff2;
+    transform: rotate(90deg);
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transition: 300ms;
+    cursor: pointer;
+    position: fixed;
+    height: 2.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    width: 2.5rem;
+    right: 2rem;
+    z-index: 10;
+    opacity: 0;
+
+    &:hover {
+      background-color: #fff4;
+    }
+
+    span {
+      transform: translateY(-1.5px);
+      user-select: none;
+    }
+
+    @media (max-width: 768px) {
+      right: 1.5rem;
     }
   }
 }
